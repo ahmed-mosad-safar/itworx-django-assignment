@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{%block title%}Home{%endblock%}
+{% block content %}
+	<h3>
+ <a href="{% url 'home' %}" >Home</a>
+</h3>
+	<h3>
+ <a href="{% url 'products' %}" >All Products</a>
+</h3>
+<div>
+    <h2>Name</h2>
+    {{product.Name}}
+</div>
+<div>
+    <h2>Description</h2>
+{{product.Description}}
+</div>
+<div>
+   <h2>
+       Image Name
+</h2>
+    {{product.Image}}
+</div>
+{% endblock %}

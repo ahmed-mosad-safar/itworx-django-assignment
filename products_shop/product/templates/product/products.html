@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{%block title%}Home{%endblock%}
+{% block content %}
+	<h3>
+ <a href="{% url 'home' %}" >Home</a>
+</h3>
+<h1>Products</h1>
+<p>
+    {%for product in products%}
+    <a href="{% url 'detail' product.id %}">{{product.Name}}</a>
+    {%endfor%}
+</p>
+{% endblock %}
